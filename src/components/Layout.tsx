@@ -26,7 +26,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 text-gray-900">
-      <header className="bg-white shadow-sm">
+      <header
+        className="bg-white shadow-sm"
+        style={{
+          position: 'sticky',
+          top: 0,
+          zIndex: 999,
+          boxShadow: '0 2px 5px 2px rgba(0, 0, 0, 0.05)',
+        }}
+      >
         <nav className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between flex-wrap">
             <Link href="/" className="flex items-center text-gray-900 hover:text-gray-600 transition-colors">
